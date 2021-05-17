@@ -39,7 +39,8 @@ assert a == 1 # 正常なので何も起きない
 assert a == b # 誤りなのでエラー
 
 # 実用的な使い方
-res = function1(**)
+## 作成した関数を実行して、結果が想定通りかをチェックする。
+res = function1() # 作成した関数を実行する
 assert res.get("data") # res(辞書)にdataというキーが存在すること
 assert len(res["data"]) >= 1 # データ数が１以上であること
 assert res["data"][0]["nane"] == "想定する名前" # 想定したデータが返ってきていること
